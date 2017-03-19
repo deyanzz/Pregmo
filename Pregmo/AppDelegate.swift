@@ -9,7 +9,8 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+
+class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
 
     var window: UIWindow?
 
@@ -22,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                        green: 166/255.0,
                                                        blue: 91/255.0,
                                                        alpha: 1.0)
+        
+        let tabBarController = window?.rootViewController as! UITabBarController
+        tabBarController.delegate = self
         
         return true
     }
@@ -48,6 +52,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: UITabBarControllerDelegate
 
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        if (tabBarController.selectedViewController is HearBeatViewController)
+            && viewController is EcographyViewController {
+            
+            let heartBeatViewController = tabBarController.selectedViewController as! HearBeatViewController
+            
+            if !heartBeatViewController.isPulsatingHeartBeat {
+                return true
+            }
+            
+            let message: String = "You are currently tracking the baby's heart beat.\n\nDo you really want to stop it now?"
+            let alertController = UIAlertController(title: "Warning!",
+                                                    message: message,
+                                                    preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let stopAction   = UIAlertAction(title: "Stop Now",
+                                             style: .destructive,
+                                             handler: { (action: UIAlertAction) in
+                                                
+                                                heartBeatViewController.stopPulsingHeartBeat(animated: false)
+                                                tabBarController.selectedIndex = 1
+                                            })
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(stopAction)
+            
+            heartBeatViewController.present(alertController, animated: true, completion: nil)
+            
+            return false
+            
+        }
+        
+        return true
+    }
 }
 

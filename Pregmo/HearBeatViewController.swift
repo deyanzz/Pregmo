@@ -115,7 +115,7 @@ class HearBeatViewController: UIViewController {
         stopPulsingHeartBeat(animated: true)
     }
     
-    func stopPulsingHeartBeat(animated: Bool) {
+    public func stopPulsingHeartBeat(animated: Bool) {
         
         self.puslingHeartBeat.stop()
         

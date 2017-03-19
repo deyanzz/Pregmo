@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2F3583CA75F188A52C501098 /* Pods_PregmoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1E4F0B74474485616212E2 /* Pods_PregmoUITests.framework */; };
+		7A4D7E831E7E7D0C00B07E28 /* HearBeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D7E821E7E7D0C00B07E28 /* HearBeatViewController.swift */; };
+		7A4D7E851E7E7E6100B07E28 /* EcographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D7E841E7E7E6100B07E28 /* EcographyViewController.swift */; };
 		7A6868B51E7E15750088423C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6868B41E7E15750088423C /* AppDelegate.swift */; };
-		7A6868B71E7E15750088423C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6868B61E7E15750088423C /* FirstViewController.swift */; };
-		7A6868B91E7E15750088423C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6868B81E7E15750088423C /* SecondViewController.swift */; };
 		7A6868BC1E7E15750088423C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6868BA1E7E15750088423C /* Main.storyboard */; };
 		7A6868BE1E7E15750088423C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6868BD1E7E15750088423C /* Assets.xcassets */; };
 		7A6868C11E7E15750088423C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6868BF1E7E15750088423C /* LaunchScreen.storyboard */; };
@@ -42,10 +42,10 @@
 		40066D76B4E407AD4EDFB247 /* Pods-PregmoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PregmoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PregmoUITests/Pods-PregmoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C16E7EEB58ED3826F446411 /* Pods-PregmoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PregmoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PregmoTests/Pods-PregmoTests.release.xcconfig"; sourceTree = "<group>"; };
 		60977306DA686E82B6A2C8A3 /* Pods-Pregmo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregmo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pregmo/Pods-Pregmo.debug.xcconfig"; sourceTree = "<group>"; };
+		7A4D7E821E7E7D0C00B07E28 /* HearBeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HearBeatViewController.swift; sourceTree = "<group>"; };
+		7A4D7E841E7E7E6100B07E28 /* EcographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcographyViewController.swift; sourceTree = "<group>"; };
 		7A6868B11E7E15750088423C /* Pregmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pregmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6868B41E7E15750088423C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A6868B61E7E15750088423C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7A6868B81E7E15750088423C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7A6868BB1E7E15750088423C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A6868BD1E7E15750088423C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A6868C01E7E15750088423C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				7A6868B41E7E15750088423C /* AppDelegate.swift */,
-				7A6868B61E7E15750088423C /* FirstViewController.swift */,
-				7A6868B81E7E15750088423C /* SecondViewController.swift */,
+				7A4D7E821E7E7D0C00B07E28 /* HearBeatViewController.swift */,
+				7A4D7E841E7E7E6100B07E28 /* EcographyViewController.swift */,
 				7A6868BA1E7E15750088423C /* Main.storyboard */,
 				7A6868BD1E7E15750088423C /* Assets.xcassets */,
 				7A6868BF1E7E15750088423C /* LaunchScreen.storyboard */,
@@ -452,9 +452,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6868B91E7E15750088423C /* SecondViewController.swift in Sources */,
+				7A4D7E851E7E7E6100B07E28 /* EcographyViewController.swift in Sources */,
+				7A4D7E831E7E7D0C00B07E28 /* HearBeatViewController.swift in Sources */,
 				7A6868B51E7E15750088423C /* AppDelegate.swift in Sources */,
-				7A6868B71E7E15750088423C /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

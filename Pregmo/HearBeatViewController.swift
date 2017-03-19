@@ -20,6 +20,10 @@ class HearBeatViewController: UIViewController {
     
     var puslingHeartBeat = Pulsator()
     
+    public var isPulsatingHeartBeat: Bool {
+        return puslingHeartBeat.isPulsating
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -119,7 +123,7 @@ class HearBeatViewController: UIViewController {
                         self.heartBeatBackgroundImageView.transform = CGAffineTransform.identity
                         self.heartBeatBackgroundImageView.alpha = 1
                         
-                        heartImageView.transform = CGAffineTransform.init(rotationAngle: 0.30)
+                        heartImageView.transform = CGAffineTransform.init(rotationAngle: 0.20)
                         heartImageView.center = self.redHeartRotatedImageView.center
                         
         }) { (finished: Bool) in

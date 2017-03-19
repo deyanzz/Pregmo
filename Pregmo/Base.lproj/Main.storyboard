@@ -113,7 +113,7 @@
                             <constraint firstItem="NtP-ml-JF7" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="10" id="ygR-MB-xW7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="HeartBeat" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="HeartBeat" image="tab-bar-heart-button-icon" selectedImage="tab-bar-heart-button-icon" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="containerView" destination="Pi5-lk-hZh" id="pWY-jJ-FR6"/>
                         <outlet property="heartBeatBackgroundImageView" destination="wHu-6D-rZi" id="F8o-FV-hHl"/>
@@ -176,7 +176,7 @@
                             <constraint firstItem="Xl4-HI-VnK" firstAttribute="top" secondItem="Mfs-0f-56d" secondAttribute="bottom" constant="30" id="pl3-Ee-ldd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ecography" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Ecography" image="tab-bar-ecography-icon" selectedImage="tab-bar-ecography-icon" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="preorderNowButton" destination="Xl4-HI-VnK" id="Nkq-Nc-Y5o"/>
                     </connections>
@@ -206,12 +206,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
         <image name="heart-beat-background-image-heartless" width="253" height="410"/>
         <image name="logo-image-icon" width="469" height="196"/>
         <image name="pregmo-device-image" width="341" height="341"/>
         <image name="red-heart-right" width="40" height="40"/>
         <image name="red-heart-straight" width="40" height="40"/>
-        <image name="second" width="30" height="30"/>
+        <image name="tab-bar-ecography-icon" width="25" height="25"/>
+        <image name="tab-bar-heart-button-icon" width="25" height="25"/>
     </resources>
 </document>

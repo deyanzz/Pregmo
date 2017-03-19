@@ -22,17 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pi5-lk-hZh" userLabel="Container View">
-                                <rect key="frame" x="37" y="84" width="300" height="500"/>
+                                <rect key="frame" x="37" y="33.5" width="300" height="440"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-beat-background-image" translatesAutoresizingMaskIntoConstraints="NO" id="wHu-6D-rZi">
-                                        <rect key="frame" x="23" y="45" width="254" height="410"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-beat-background-image-heartless" translatesAutoresizingMaskIntoConstraints="NO" id="wHu-6D-rZi">
+                                        <rect key="frame" x="23" y="15" width="254" height="410"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="410" id="o6r-dG-UiU"/>
                                             <constraint firstAttribute="width" constant="254" id="wzO-A0-S03"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-heart-right" translatesAutoresizingMaskIntoConstraints="NO" id="ynI-ca-Cyd">
-                                        <rect key="frame" x="74" y="346" width="40" height="39"/>
+                                        <rect key="frame" x="74" y="315" width="40" height="39"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="CaA-ZJ-B2z"/>
@@ -41,25 +41,58 @@
                                             <constraint firstAttribute="height" constant="39" id="tDq-CU-pHt"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-heart-straight" translatesAutoresizingMaskIntoConstraints="NO" id="XdX-om-6IT">
+                                        <rect key="frame" x="122" y="200" width="40" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="jFK-JE-plq"/>
+                                            <constraint firstAttribute="height" constant="39" id="uRn-6F-RUQ"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="wHu-6D-rZi" firstAttribute="centerY" secondItem="Pi5-lk-hZh" secondAttribute="centerY" id="1rk-a5-uqj"/>
+                                    <constraint firstItem="XdX-om-6IT" firstAttribute="centerX" secondItem="Pi5-lk-hZh" secondAttribute="centerX" constant="-8" id="5gm-Vt-BSn"/>
                                     <constraint firstAttribute="width" constant="300" id="BC4-em-ijO"/>
                                     <constraint firstItem="wHu-6D-rZi" firstAttribute="centerX" secondItem="Pi5-lk-hZh" secondAttribute="centerX" id="Krh-8a-t4I"/>
-                                    <constraint firstAttribute="height" constant="500" id="MVL-ZK-Jy3"/>
+                                    <constraint firstAttribute="height" constant="440" id="MVL-ZK-Jy3"/>
+                                    <constraint firstItem="XdX-om-6IT" firstAttribute="top" secondItem="Pi5-lk-hZh" secondAttribute="top" constant="200" id="UsZ-xO-8qv"/>
                                     <constraint firstItem="ynI-ca-Cyd" firstAttribute="leading" secondItem="Pi5-lk-hZh" secondAttribute="leading" constant="74" id="jXZ-BI-IGS"/>
-                                    <constraint firstItem="ynI-ca-Cyd" firstAttribute="top" secondItem="Pi5-lk-hZh" secondAttribute="top" constant="346" id="z56-wQ-BeF"/>
+                                    <constraint firstItem="ynI-ca-Cyd" firstAttribute="top" secondItem="Pi5-lk-hZh" secondAttribute="top" constant="315" id="z56-wQ-BeF"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vr9-0n-fpv">
+                                <rect key="frame" x="137" y="560" width="100" height="36"/>
+                                <color key="backgroundColor" red="0.61960784313725492" green="0.59215686274509804" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LWd-tO-m3z"/>
+                                    <constraint firstAttribute="height" constant="36" id="bmj-pz-xmy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.95294117647058818" green="0.65098039215686276" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="uB6-eT-9tb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Vr9-0n-fpv" secondAttribute="bottom" constant="22" id="W9q-pE-p9Y"/>
                             <constraint firstItem="Pi5-lk-hZh" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="gYO-pO-rJv"/>
-                            <constraint firstItem="Pi5-lk-hZh" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="hbT-iE-PhL"/>
+                            <constraint firstItem="Pi5-lk-hZh" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-80" id="hbT-iE-PhL"/>
+                            <constraint firstItem="Vr9-0n-fpv" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="o1c-au-iQe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="HeartBeat" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="containerView" destination="Pi5-lk-hZh" id="pWY-jJ-FR6"/>
+                        <outlet property="heartBeatBackgroundImageView" destination="wHu-6D-rZi" id="F8o-FV-hHl"/>
+                        <outlet property="redHeartImageView" destination="XdX-om-6IT" id="7EB-Yi-P8u"/>
+                        <outlet property="redHeartRotatedImageView" destination="ynI-ca-Cyd" id="b8u-F2-eVZ"/>
+                        <outlet property="startButton" destination="Vr9-0n-fpv" id="1j5-sW-fdc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,8 +160,9 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="heart-beat-background-image" width="253" height="410"/>
+        <image name="heart-beat-background-image-heartless" width="253" height="410"/>
         <image name="red-heart-right" width="40" height="40"/>
+        <image name="red-heart-straight" width="40" height="40"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

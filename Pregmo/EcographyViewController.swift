@@ -10,10 +10,18 @@ import UIKit
 
 class EcographyViewController: UIViewController {
 
+    @IBOutlet weak var preorderNowButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        preorderNowButton.layer.cornerRadius = 6.0
+        preorderNowButton.clipsToBounds = true
+        
+        preorderNowButton.layer.cornerRadius = 6.0
+        preorderNowButton.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

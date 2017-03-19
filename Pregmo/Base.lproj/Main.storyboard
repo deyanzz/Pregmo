@@ -162,7 +162,7 @@
                                     <constraint firstAttribute="height" constant="45" id="aqC-wz-0cc"/>
                                     <constraint firstAttribute="width" constant="200" id="tF9-yh-APX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="PREORDER NOW"/>
                             </button>
                         </subviews>
@@ -177,6 +177,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ecography" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="preorderNowButton" destination="Xl4-HI-VnK" id="Nkq-Nc-Y5o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

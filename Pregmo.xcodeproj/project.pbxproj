@@ -421,6 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 25H44B9439;
 				INFOPLIST_FILE = Pregmo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swplovdiv2017.Pregmo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 25H44B9439;
 				INFOPLIST_FILE = Pregmo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swplovdiv2017.Pregmo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +520,7 @@
 				7A6868DD1E7E15750088423C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A6868DE1E7E15750088423C /* Build configuration list for PBXNativeTarget "PregmoTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +529,7 @@
 				7A6868E01E7E15750088423C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A6868E11E7E15750088423C /* Build configuration list for PBXNativeTarget "PregmoUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +538,7 @@
 				7A6868E31E7E15750088423C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

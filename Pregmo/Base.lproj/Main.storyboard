@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pi5-lk-hZh" userLabel="Container View">
-                                <rect key="frame" x="37" y="33.5" width="300" height="440"/>
+                                <rect key="frame" x="37" y="63.5" width="300" height="440"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-beat-background-image-heartless" translatesAutoresizingMaskIntoConstraints="NO" id="wHu-6D-rZi">
                                         <rect key="frame" x="23" y="15" width="254" height="410"/>
@@ -76,13 +76,41 @@
                                     <action selector="startButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="uB6-eT-9tb"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vh-Zz-wWX">
+                                <rect key="frame" x="253" y="560" width="100" height="36"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.59215686270000001" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="0BL-8m-NCN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="rkE-EF-dja"/>
+                                    <constraint firstAttribute="height" constant="36" id="uUV-xe-ahV"/>
+                                    <constraint firstAttribute="width" constant="100" id="xVE-eL-Uxk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.65098039220000004" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="eaC-0c-khv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-image-icon" translatesAutoresizingMaskIntoConstraints="NO" id="NtP-ml-JF7">
+                                <rect key="frame" x="16" y="30" width="118" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="4Z5-Tt-F4r"/>
+                                    <constraint firstAttribute="width" constant="118" id="p4Y-Cd-nvt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="1Vh-Zz-wWX" firstAttribute="leading" secondItem="Vr9-0n-fpv" secondAttribute="trailing" constant="16" id="7bU-2d-zMs"/>
+                            <constraint firstItem="NtP-ml-JF7" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="16" id="M56-jf-sxQ"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Vr9-0n-fpv" secondAttribute="bottom" constant="22" id="W9q-pE-p9Y"/>
+                            <constraint firstItem="1Vh-Zz-wWX" firstAttribute="top" secondItem="Vr9-0n-fpv" secondAttribute="top" id="ZHf-nM-mSs"/>
                             <constraint firstItem="Pi5-lk-hZh" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="gYO-pO-rJv"/>
-                            <constraint firstItem="Pi5-lk-hZh" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-80" id="hbT-iE-PhL"/>
+                            <constraint firstItem="Pi5-lk-hZh" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-50" id="hbT-iE-PhL"/>
                             <constraint firstItem="Vr9-0n-fpv" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="o1c-au-iQe"/>
+                            <constraint firstItem="NtP-ml-JF7" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="10" id="ygR-MB-xW7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="HeartBeat" image="first" id="acW-dT-cKf"/>
@@ -92,6 +120,7 @@
                         <outlet property="redHeartImageView" destination="XdX-om-6IT" id="7EB-Yi-P8u"/>
                         <outlet property="redHeartRotatedImageView" destination="ynI-ca-Cyd" id="b8u-F2-eVZ"/>
                         <outlet property="startButton" destination="Vr9-0n-fpv" id="1j5-sW-fdc"/>
+                        <outlet property="stopButton" destination="1Vh-Zz-wWX" id="l3u-CI-hoe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -161,6 +190,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="heart-beat-background-image-heartless" width="253" height="410"/>
+        <image name="logo-image-icon" width="469" height="196"/>
         <image name="red-heart-right" width="40" height="40"/>
         <image name="red-heart-straight" width="40" height="40"/>
         <image name="second" width="30" height="30"/>

@@ -16,18 +16,30 @@ class HearBeatViewController: UIViewController {
     @IBOutlet weak var redHeartRotatedImageView: UIImageView!
     @IBOutlet weak var redHeartImageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
-    var puslingHeartBeat: Pulsator = Pulsator()
+    var puslingHeartBeat = Pulsator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        initializePulsingHeartBeat()
-        
-        startButton.layer.cornerRadius = 4.0
+        startButton.layer.cornerRadius = 6.0
         startButton.clipsToBounds = true
+        
+        stopButton.layer.cornerRadius = 6.0
+        stopButton.clipsToBounds = true
+        
+        initializePulsingHeartBeat()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.layer.layoutIfNeeded()
+        
+        puslingHeartBeat.position = redHeartImageView.layer.position
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,15 +49,11 @@ class HearBeatViewController: UIViewController {
     
     func initializePulsingHeartBeat() {
         
-//        puslingHeartBeat = Pulsator(layer: redHeartImageView.layer)
-        
-        redHeartImageView.superview?.layer.insertSublayer(puslingHeartBeat, below: redHeartImageView.layer)
+        redHeartImageView.layer.superlayer?.insertSublayer(puslingHeartBeat, below: redHeartImageView.layer)
         
         puslingHeartBeat.numPulse = 5
-        puslingHeartBeat.repeatCount = .greatestFiniteMagnitude
-        puslingHeartBeat.radius = 150
-        puslingHeartBeat.pulseInterval = 0.1
-        puslingHeartBeat.instanceDelay = 0
+        puslingHeartBeat.radius = 120
+        puslingHeartBeat.animationDuration = 5
         puslingHeartBeat.backgroundColor = UIColor.init(colorLiteralRed: 244/255.0,
                                                         green: 122/255.0,
                                                         blue: 131/255.0,
@@ -75,6 +83,7 @@ class HearBeatViewController: UIViewController {
                     }) { (finished: Bool) in
                         
                         self.redHeartImageView.isHidden = false
+                        self.stopButton.isHidden = false
                         
                         heartImageView.removeFromSuperview()
                         
@@ -82,4 +91,14 @@ class HearBeatViewController: UIViewController {
                     }
     }
 
+    @IBAction func stopButtonTapped(_ sender: UIButton) {
+        
+        if !puslingHeartBeat.isPulsating {
+            return
+        }
+        
+        self.puslingHeartBeat.stop()
+        self.stopButton.isHidden = true
+        self.startButton.isHidden = false
+    }
 }

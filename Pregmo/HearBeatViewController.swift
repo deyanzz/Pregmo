@@ -25,9 +25,13 @@ class HearBeatViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        startButton.layer.borderColor = UIColor.lightGray.cgColor
+        startButton.layer.borderWidth = 2.0
         startButton.layer.cornerRadius = 6.0
         startButton.clipsToBounds = true
         
+        stopButton.layer.borderColor = UIColor.lightGray.cgColor
+        stopButton.layer.borderWidth = 2.0
         stopButton.layer.cornerRadius = 6.0
         stopButton.clipsToBounds = true
         
@@ -74,6 +78,7 @@ class HearBeatViewController: UIViewController {
         UIView.animate(withDuration: 0.5,
                        animations: {
                         
+                        self.heartBeatBackgroundImageView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
                         self.heartBeatBackgroundImageView.alpha = 0
 
                         heartImageView.transform = CGAffineTransform.init(rotationAngle: -0.50)
@@ -98,7 +103,31 @@ class HearBeatViewController: UIViewController {
         }
         
         self.puslingHeartBeat.stop()
+        
+        let heartImageView = UIImageView(frame: redHeartImageView.frame)
+        heartImageView.contentMode = .scaleAspectFit
+        heartImageView.image = redHeartRotatedImageView.image
+        
+        containerView.addSubview(heartImageView)
+        
+        self.redHeartImageView.isHidden = true
         self.stopButton.isHidden = true
-        self.startButton.isHidden = false
+        
+        UIView.animate(withDuration: 0.5,
+                       animations: {
+                        
+                        self.heartBeatBackgroundImageView.transform = CGAffineTransform.identity
+                        self.heartBeatBackgroundImageView.alpha = 1
+                        
+                        heartImageView.transform = CGAffineTransform.init(rotationAngle: 0.30)
+                        heartImageView.center = self.redHeartRotatedImageView.center
+                        
+        }) { (finished: Bool) in
+            
+            self.startButton.isHidden = false
+            self.redHeartRotatedImageView.isHidden = false
+            
+            heartImageView.removeFromSuperview()
+        }
     }
 }

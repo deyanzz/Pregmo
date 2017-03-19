@@ -63,12 +63,12 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vr9-0n-fpv">
                                 <rect key="frame" x="137" y="560" width="100" height="36"/>
-                                <color key="backgroundColor" red="0.61960784313725492" green="0.59215686274509804" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LWd-tO-m3z"/>
                                     <constraint firstAttribute="height" constant="36" id="bmj-pz-xmy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.95294117647058818" green="0.65098039215686276" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -78,14 +78,14 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vh-Zz-wWX">
                                 <rect key="frame" x="253" y="560" width="100" height="36"/>
-                                <color key="backgroundColor" red="0.61960784310000006" green="0.59215686270000001" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="0BL-8m-NCN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="rkE-EF-dja"/>
                                     <constraint firstAttribute="height" constant="36" id="uUV-xe-ahV"/>
                                     <constraint firstAttribute="width" constant="100" id="xVE-eL-Uxk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="STOP">
                                     <color key="titleColor" red="0.95294117649999999" green="0.65098039220000004" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>

@@ -49,6 +49,12 @@ class HearBeatViewController: UIViewController {
         
         puslingHeartBeat.position = redHeartImageView.layer.position
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.puslingHeartBeat.stop()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -106,7 +112,26 @@ class HearBeatViewController: UIViewController {
             return
         }
         
+        stopPulsingHeartBeat(animated: true)
+    }
+    
+    func stopPulsingHeartBeat(animated: Bool) {
+        
         self.puslingHeartBeat.stop()
+        
+        if !animated {
+         
+            redHeartImageView.isHidden = true
+            stopButton.isHidden = true
+            startButton.isHidden = false
+            
+            heartBeatBackgroundImageView.transform = CGAffineTransform.identity
+            heartBeatBackgroundImageView.alpha = 1
+            
+            redHeartRotatedImageView.isHidden = false
+            
+            return
+        }
         
         let heartImageView = UIImageView(frame: redHeartImageView.frame)
         heartImageView.contentMode = .scaleAspectFit
@@ -114,8 +139,8 @@ class HearBeatViewController: UIViewController {
         
         containerView.addSubview(heartImageView)
         
-        self.redHeartImageView.isHidden = true
-        self.stopButton.isHidden = true
+        redHeartImageView.isHidden = true
+        stopButton.isHidden = true
         
         UIView.animate(withDuration: 0.5,
                        animations: {
